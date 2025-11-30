@@ -148,6 +148,25 @@ services:
       - backend
     restart: unless-stopped
 
+  # Web Application (SvelteKit)
+  web-app:
+    build:
+      context: ./web-app
+      dockerfile: Dockerfile
+    container_name: web-app
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - HOST=0.0.0.0
+      - PUBLIC_API_URL=http://api-gateway:8080
+    depends_on:
+      - api-gateway
+    networks:
+      - backend
+    restart: unless-stopped
+
 networks:
   backend:
     driver: bridge
