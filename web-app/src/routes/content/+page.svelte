@@ -4,7 +4,9 @@
 	import { contentService } from '$services/content.service';
 	import ContentCard from '$components/ContentCard.svelte';
 	import FilterPanel from '$components/FilterPanel.svelte';
-	import { toastStore } from '@skeletonlabs/skeleton';
+	import { getToastStore } from '@skeletonlabs/skeleton';
+
+	const toastStore = getToastStore();
 
 	let loading = false;
 

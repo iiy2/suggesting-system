@@ -4,7 +4,9 @@
 	import { recommendationsService } from '$services/recommendations.service';
 	import type { Recommendation } from '$types';
 	import RecommendationCard from '$components/RecommendationCard.svelte';
-	import { toastStore } from '@skeletonlabs/skeleton';
+	import { getToastStore } from '@skeletonlabs/skeleton';
+
+	const toastStore = getToastStore();
 
 	let recommendations: Recommendation[] = [];
 	let loading = true;

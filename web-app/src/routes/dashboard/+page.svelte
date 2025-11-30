@@ -3,7 +3,9 @@
 	import { authStore } from '$stores/auth';
 	import { authService } from '$services/auth.service';
 	import { goto } from '$app/navigation';
-	import { toastStore } from '@skeletonlabs/skeleton';
+	import { getToastStore } from '@skeletonlabs/skeleton';
+
+	const toastStore = getToastStore();
 
 	let user = $authStore.user;
 	let loading = false;

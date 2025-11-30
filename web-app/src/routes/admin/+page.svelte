@@ -4,8 +4,11 @@
 	import { contentService } from '$services/content.service';
 	import { goto } from '$app/navigation';
 	import type { Content, ContentType, DifficultyLevel } from '$types';
-	import { toastStore, modalStore } from '@skeletonlabs/skeleton';
+	import { getToastStore, getModalStore } from '@skeletonlabs/skeleton';
 	import type { ModalSettings } from '@skeletonlabs/skeleton';
+
+	const toastStore = getToastStore();
+	const modalStore = getModalStore();
 
 	let contents: Content[] = [];
 	let loading = false;

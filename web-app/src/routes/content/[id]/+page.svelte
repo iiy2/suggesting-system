@@ -8,7 +8,9 @@
 	import type { Content, Recommendation, UserInteraction } from '$types';
 	import RatingStars from '$components/RatingStars.svelte';
 	import RecommendationCard from '$components/RecommendationCard.svelte';
-	import { toastStore } from '@skeletonlabs/skeleton';
+	import { getToastStore } from '@skeletonlabs/skeleton';
+
+	const toastStore = getToastStore();
 
 	let content: Content | null = null;
 	let similarContent: Recommendation[] = [];
