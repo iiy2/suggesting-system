@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/golang-jwt/jwt/v5"
-	"github.com/yourusername/suggesting-system/api-gateway/pkg/logger"
+	"github.com/iiy/api-gateway/pkg/logger"
 	"go.uber.org/zap"
 )
 
